@@ -110,7 +110,6 @@ h2 {
 
 .navbar {
   height: 50px;
-  /* width: 800px; */
   width: clamp(320px, 100%, 800px);
   border-radius: 4px;
   display: flex;
@@ -134,6 +133,15 @@ h2 {
   text-decoration: none;
 }
 
+.user__mail {
+  height: 15px;
+  padding: 0px 10px;
+}
+
+.signup {
+  width: clamp(320px, 100%, 400px);
+}
+
 .button_user {
   margin-top: 20px;
 }
@@ -148,5 +156,14 @@ h2 {
   }
   .post__content {
     padding-right: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    height: 70px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
