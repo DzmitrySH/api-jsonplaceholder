@@ -31,7 +31,10 @@ export const Navbar = () => {
           {showUser[0]}
         </div>
       </> )
-        : ''}
+        : <Link to='/login'>
+            <MyButton>Вход</MyButton>
+          </Link>
+      }
     <div className='navbar__links'>
       <Link to='/about'><MyButton>О сайте</MyButton></Link>
       <Link to='/posts'><MyButton>Посты</MyButton></Link>

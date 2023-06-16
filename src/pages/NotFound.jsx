@@ -6,7 +6,7 @@ export const NotFound = () => {
   return (
     <>
       <div style={{ padding: 10 }}>
-        <h3 style={{ color: 'orange' }}>NotFound</h3>
+        <h3 style={{ color: 'orange' }}>Что то пошло не так</h3>
       </div>
       <Link to="/posts">
         <MyButton>Вернутся</MyButton>
