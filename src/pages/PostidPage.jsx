@@ -25,7 +25,7 @@ const PostidPage = () => {
 
   return (
     <div className='comments'>
-      <h3>Попал на страницу поста id = {params.id}</h3>
+      <h3>Страница поста id = {params.id}</h3>
       {isLoading
         ? <Loader />
         : ( <>

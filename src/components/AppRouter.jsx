@@ -8,6 +8,7 @@ import { AuthContext } from '../context/index';
 import { NotFound } from '../pages/NotFound';
 import { Loader } from './Ui/loader/Loader';
 import { Layout } from './Layout';
+import { Start } from "../pages/Start";
 
 export const AppRouter = () => {
   const {isAuth, isLoading} = useContext(AuthContext);
@@ -19,6 +20,7 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route index element={<Start />} />
         <Route path="/posts" element={isAuth ? <Posts /> : <Navigate to="/login" />}/>
         <Route path="/posts/:id" element={<PostidPage />} />
         <Route path="/about" element={<About />} />

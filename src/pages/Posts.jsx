@@ -16,7 +16,8 @@ function Posts() {
   const [filter, setFilter] = useState({sort: '', query: ''})
   const [modal, setModal] = useState(false);
   const [totalPage, setTotalPage] = useState(0);
-  const [limit, setLimit] = useState(10);
+  // const [limit, setLimit] = useState(10);
+  const limit = 10;
   const [page, setPage] = useState(1);
   const sortedSearchPosts = usePosts(posts, filter.sort, filter.query);//castom hooks
 
@@ -61,7 +62,7 @@ function Posts() {
         />
       </div>
       {postError && 
-        <h2>Ошибка ${postError}</h2>
+        <h2>Ошибка: {postError}</h2>
       }
       {postLoadung
         ? <div className='load'><Loader /></div>

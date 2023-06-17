@@ -146,6 +146,12 @@ h2 {
   margin-top: 20px;
 }
 
+.start__page {
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
 @media (max-width: 500px) {
   .post {
     flex-direction: column;
