@@ -24,7 +24,7 @@ export const AppRouter = () => {
         <Route path="/posts" element={isAuth ? <Posts /> : <Navigate to="/login" />}/>
         <Route path="/posts/:id" element={<PostidPage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={!isAuth ? <Login /> : <Navigate to="/posts" />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
